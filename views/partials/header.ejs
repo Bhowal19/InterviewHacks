@@ -68,9 +68,77 @@ changeNavbarColor(page2BgColor);
         }
       }
     </script>
+
     <title>InterviewHacks</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+  
+      #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        z-index: 1000;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+  
+      #header.sticky {
+        background-color: #ffffff;
+      }
+  
+      #logo {
+        width: 100px;
+        height: auto;
+        transition: opacity 0.3s;
+      }
+  
+      #header.sticky #logo {
+        opacity: 0;
+      }
+  
+      #menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+  
+      #menu li {
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var header = $('#header');
+      var logo = $('#logo img:last-child');
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+          header.addClass('sticky');
+          logo.attr('src', 'https://interview-answe.onrender.com/IHLogonew.png'); // Change the logo image source
+          logo.css('opacity', '1'); // Show the new logo image
+        } else {
+          header.removeClass('sticky');
+          logo.attr('src', 'https://www.vhv.rs/dpng/d/471-4711911_spotify-logo-white-png-vibram-png-white-logo.png'); // Change the logo image source
+          logo.css('opacity', '0'); // Hide the logo image
+        }
+      });
+    });
+  </script>
+<!-- original navbar code -->
+
     <!-- <nav class="navbar navbar-expand-lg navb">
       <div class="nav_l">
               <a class="navbar-brand" href="#">
@@ -110,7 +178,12 @@ changeNavbarColor(page2BgColor);
       </div>
     </nav> -->
 
-    <nav class="navbar navbar-expand-lg navb fixed-top">
+
+
+
+    <!-- My navbar code -->
+
+    <!-- <nav class="navbar navbar-expand-lg navb fixed-top">
       <div class="nav_l">
         <a class="navbar-brand" href="#">
     <img
@@ -142,7 +215,24 @@ changeNavbarColor(page2BgColor);
           </div>
         </div>
       </div>
-    </nav>
-    
+    </nav> -->
+
+
+    <!-- new navbar code -->
+    <div id="header">
+      <div id="logo">
+        <img src="https://www.vhv.rs/dpng/d/471-4711911_spotify-logo-white-png-vibram-png-white-logo.png" width="50%" alt="Logo 1">
+        <img src="https://interview-answe.onrender.com/IHLogonew.png" alt="Logo 2" style="display: none;">
+      </div>
+      <ul id="menu">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+  
+  
+
+
   </body>
 </html>

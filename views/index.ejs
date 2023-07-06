@@ -47,7 +47,8 @@
     </div>
 
     <div class="hero_img">
-      <img src="/laptop.png" alt="Laptop_png" />
+      <img src="/laptop.png" alt="Laptop_png" class="desktop-img"/>
+      <!-- <img src="/laptop_mob.png" alt="Laptop_mob_png" class="mobile-img" /> -->
     </div>
   </div>
 
@@ -71,29 +72,11 @@
     <img src="/step-1-2.png" alt="" />
   </div>
 
-  <!----Form -->
-  <form action="/resume" method="post">
+  <form id="int_form" action="/resume" method="post">
+    <!-- onsubmit="show()" -->
     <div class="cardz">
       <h3>STEP 1:</h3>
-      <div class="cardz">
-        <div class="card-container">
-          <div
-            class="card text-center p-4 shadow"
-            style="width: 18rem; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);"
-          >
-            <h2 class="card-title pb-3">Upload Your CV</h2>
-            <img
-              class="card-img-top
-              id="uploadImage"
-              src="/folder.png"
-              alt="Card image cap"
-            />
-            <p>Drag and Drop Files here</p>
-          </div>
-        </div>
-      </form> 
-
-      <!-- <div class="card-container">
+      <div class="card-container">
         <div
           class="card text-center p-4 shadow"
           style="width: 25rem; border-radius: 29px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1), 0 15px 25px rgba(0, 0, 0, 0.1);"
@@ -141,7 +124,69 @@
             ></textarea>
           </div>
         </div>
-      </div>  -->
+      </div>
+      <h3>STEP 2:</h3>
+      <div class="card-container">
+        <div
+          class="card text-center p-4 shadow"
+          style="width: 25rem; border-radius: 29px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);"
+        >
+          <h2 class="card-title pb-3">Paste your JD</h2>
+          <div class="mb-3">
+            <label for="experience" class="form-label"
+              >Paste Job Description</label
+            >
+            <textarea
+              class="form-control"
+              id="jd"
+              name="jd"
+              rows="6"
+            ></textarea>
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control rounded-pill border border-dashed border-secondary"
+              placeholder="Paste Your JD Link"
+              aria-label="Input Field"
+              aria-describedby="button-addon2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn-p">Generate Answers</button>
+      </div>
+    </div>
+  </form>
+
+  <!----Form -->
+  <form action="/resume" method="post">
+    <div class="cardz">
+      <!-- <h3>STEP 1:</h3> -->
+      <div class="cardz">
+        <div class="card-container">
+          <div
+            class="card text-center p-4 shadow"
+            style="width: 18rem; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);"
+          >
+            <h2 class="card-title pb-3">Upload Your CV</h2>
+            <img
+              class="card-img-top
+              id="uploadImage"
+              src="/folder.png"
+              alt="Card image cap"
+            />
+            <p>Drag and Drop Files here</p>
+          </div>
+        </div>
+      </form> 
+
+    <!----Form -->
+  
+  <br>
+  <br>
 
       <div class="section_2">
         <img src="/step-two-arrow.png" alt="" />

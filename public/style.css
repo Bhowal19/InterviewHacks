@@ -195,6 +195,31 @@ padding: 4% 5%;
   margin-top: 80px;
 }
 
+/* Common styles for both desktop and mobile */
+.margin {
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  .margin {
+    margin-right: 800px;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .margin {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+}
+
+
 .hero_img {
   position: absolute;
   top: 12%; /* Adjust the top position */
